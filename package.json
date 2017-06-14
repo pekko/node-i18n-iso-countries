@@ -56,9 +56,7 @@
     "type": "git",
     "url": "https://github.com/michaelwittig/node-i18n-iso-countries.git"
   },
-  "dependencies": {
-    "pad": "1.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "assert-plus": "0.2.0",
     "mocha": "2.3.4",

@@ -1,5 +1,3 @@
-var pad = require("pad");
-
 var codes = require("./codes.json");
 var data = {
   "ar": require("./langs/ar.json"),
@@ -41,9 +39,18 @@ codes.forEach(function(codeInformation) {
   invertedNumeric[s[0]] = s[2];
 });
 
+function leftPad(length, text, padText) {
+  "use strict";
+  if (typeof text !== "string") {
+    text = "" + text;
+  }
+  var padLength = Math.max(0, length - text.length);
+  return padText.repeat(padLength) + text;
+}
+
 function formatNumericCode(code) {
   "use strict";
-  return pad(3, code, '0');
+  return leftPad(3, code, '0');
 }
 
 /*
